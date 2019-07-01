@@ -31,5 +31,8 @@ module TwitterFeed
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # This will cause the lib folder to be loaded as soon as the app is fired up
+    config.autoload_paths << Rails.root.join("lib")
   end
 end
